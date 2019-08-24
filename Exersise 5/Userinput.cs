@@ -1,15 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
 
 namespace Exersise_5
 {
-    public class Userinput
+    public class ValidateUserinput
     {
         public string Input;
-        public bool Checkinput()
+        public bool Checkinput(string PathFile)
         {
-            return true;
+            if (File.Exists(PathFile) == true)
+            {
+               return true;
+            }
+ 
+            else
+            {
+                return false;
+            }
+
         }
 
     }
